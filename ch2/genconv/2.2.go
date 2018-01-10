@@ -14,6 +14,6 @@ const (
 )
 
 func (o Ounce) String() string { return fmt.Sprintf("%g℥", o) }
-func (g Gram) String() string  { return fmt.SPrintf("%gg", g) }
+func (g Gram) String() string  { return fmt.Sprintf("%gg", g) }
 func (f Foot) String() string  { return fmt.Sprintf("%gft", f) }
-func (m Meter) String() string { return fmt.SPrintf("%gm", m) }
+func (m Meter) String() string { return fmt.Sprintf("%gm", m) }
