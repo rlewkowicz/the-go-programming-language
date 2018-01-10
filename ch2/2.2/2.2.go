@@ -1,14 +1,32 @@
-package genconv
+package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+	"strconv"
 
-type Ounce float64
-type Gram float64
-
-const (
-	Kilogram Gram  = 1000
-	Pound    Ounce = 16
+	"github.com/rlewkowicz/the-go-programming-language/ch2/genconv"
 )
 
-func (o Ounce) String() string { return fmt.Sprintf("%g℥", o) }
-func (g Gram) String() string  { return fmt.SPrintf("%gg", g) }
+func main() {
+	if len(os.Args) > 1 {
+		for _, i := range os.Args[1:] {
+			t, err := strconv.ParseFloat(i, 64)
+			if err != nil {
+				println("shits broke yo")
+				os.Exit(1)
+			}
+			convertall(t)
+		}
+	}
+}
+
+func convertall(n float64) {
+	m := genconv.Meter(n)
+	f := genconv.Foot(n)
+	o := genconv.Ounce(n)
+	g := genconv.Gram(n)
+
+	fmt.Printf("%s = %s, %s =%s, %s=%s, %s=%s\n",
+		m, genconv.MToF(m), f, genconv.FToM(f), o, genconv.OToG(o), g, genconv.GToO(g))
+}
