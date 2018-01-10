@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"os"
 	"strconv"
@@ -18,6 +19,16 @@ func main() {
 			}
 			convertall(t)
 		}
+		os.Exit(0)
+	}
+	input := bufio.NewScanner(os.Stdin)
+	for input.Scan() {
+		t, err := strconv.ParseFloat(input.Text(), 64)
+		if err != nil {
+			println("shits broke yo")
+			os.Exit(1)
+		}
+		convertall(t)
 	}
 }
 
