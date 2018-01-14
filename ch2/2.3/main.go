@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/rlewkowicz/the-go-programming-language/ch2/popcount"
+	"github.com/rlewkowicz/the-go-programming-language/ch2/popcountloop"
 )
 
 func main() {
-	fmt.Println(popcount.PopCount(9223372036854775807))
+	fmt.Println(popcountloop.PopCount(9223372036854775807))
 }

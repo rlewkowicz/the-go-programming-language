@@ -9,8 +9,9 @@ func init() {
 }
 
 func PopCount(x uint64) int {
+	a := pc[byte(x>>(0*8))]
 	for i := uint(1); i <= 7; i++ {
-		pc[byte(x>>(0*8))] += pc[byte(x>>(i*8))]
+		a += pc[byte(x>>(i*8))]
 	}
 	return int(pc[byte(x>>(0*8))])
 }
