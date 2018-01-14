@@ -1,0 +1,9 @@
+2018-01-11 09:03:18,617 INFO daemonizing the supervisord process
+2018-01-11 09:03:18,618 INFO supervisord started with pid 11941
+2018-01-11 09:03:19,620 INFO spawned: 'supervisord' with pid 11979
+2018-01-11 09:03:20,622 INFO success: supervisord entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-01-11 10:16:27,347 INFO exited: supervisord (terminated by SIGTERM; not expected)
+2018-01-11 10:16:27,347 WARN received SIGHUP indicating restart request
+2018-01-11 10:16:27,385 INFO supervisord started with pid 11941
+2018-01-11 10:16:28,387 INFO spawned: 'supervisord' with pid 16833
+2018-01-11 10:16:29,406 INFO success: supervisord entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
