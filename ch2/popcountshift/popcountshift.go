@@ -1,8 +1,4 @@
-package main
-
-func main() {
-	PopCount(5)
-}
+package popcountshift
 
 func PopCount(x uint64) int {
 	a := 0
